@@ -21,14 +21,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_NAME }}
           AWS_REGION: 'ap-south-1'
-          # Source filename prefix
-          SOURCE_PREFIX: 'infrastructure'
           
-          # Source filename suffix
-          SOURCE_SUFFIX: '.yml'
-          
-          # Destination filename prefix
-          DESTINATION_PREFIX: 'infrastructure/'
-          
-          # Destination filename suffix
-          DESTINATION_SUFFIX: ''
+          SOURCE_PREFIX: '*'
