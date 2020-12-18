@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: test shell
         run: |
-          sudo apt-get install 
-          lsb_release -a
+          sudo apt-get update
+          sudo apt-get install -y awscli
+          pwd
         
