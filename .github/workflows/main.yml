@@ -11,5 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test shell
-        run: echo "welcome to the world"
+        run: |
+          sudo apt-get install 
+          lsb_release -a
         
