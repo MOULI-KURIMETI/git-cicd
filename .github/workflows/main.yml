@@ -10,28 +10,6 @@ jobs:
     name: Copy Files To S3
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Branch
-        uses: eonx-com/actions-checkout@master
-
-      - name: Upload infrastructure files to S3 bucket
-        uses: eonx-com/actions-s3-copy@master
-        with:
-          # AWS secrets
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: 'ap-south-1'
-          
-          # Source filename prefix
-          SOURCE_PREFIX: 'infrastructure'
-          
-          # Source filename suffix
-          SOURCE_SUFFIX: '.yml'
-          
-          # Destination filename prefix
-          DESTINATION_PREFIX: 'infrastructure/'
-          
-          # Destination filename suffix
-          DESTINATION_SUFFIX: ''
-          
-          # Destination S3 bucket name
-          DESTINATION_BUCKET: 'github-actions-cicd'
+      - name: test shell
+        run: echo "welcome to the world"
+        
