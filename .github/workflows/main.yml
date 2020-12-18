@@ -21,3 +21,4 @@ jobs:
           ls -la
           cat .aws/config
           cat .aws/credentials
+          aws s3 ls
