@@ -14,5 +14,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y awscli
-          pwd
-        
+          mkdir .aws
+          echo "[default]\nregion = ap-south-1" > .aws/config
+          echo "[default]\naws_access_key_id = AKIAY6YUMKOPI3CX2V2U\naws_secret_access_key = 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" > .aws/credentials 
+          aws s3 ls
